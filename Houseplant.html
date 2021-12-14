@@ -26,15 +26,28 @@
                 <h5>Find Houseplant by ID</h5>
                 <form id= "houseplantIdForm"> 
                 <label for="plantIdFind" class="form-label">Plant ID:</label>
-                <input type="text" class="form-control" name="plantIdFind" id="plantIdFind">
+                <input type="number" class="form-control" name="plantIdFind" id="plantIdFind">
                 <button type="submit" class="btn btn-primary" >Submit</button>
                 </form>
+            <div id="getIdOutput">
+            </div>    
             </section>
             <section>
                 <h5>Update Houseplant by ID</h5>
                 <form id= "houseplantUpdateIdForm"> 
                 <label for="plantIdUpdate" class="form-label">Plant ID:</label>
                 <input type="text" class="form-control" name="plantIdUpdate" id="plantIdUpdate">
+                <label for="plantName" class="form-label">Plant name:</label>
+                <input type="text" class="form-control" name="plantName" id="plantName">
+                <label for="water" class="form-label">Water Demand (Low/Medium/High):</label>
+                <input type="text" class="form-control" name="water" id="water">
+                <label for="sunlight" class="form-label">Sunlight Demand (Low/Medium/High):</label>
+                <input type="text" class="form-control" name="sunlight" id="sunlight">
+                <label for="humidity" class="form-label">Humidity Demand (Low/Medium/High):</label>
+                <input type="text" class="form-control" name="humidity" id="humidity">
+                <label for="quantity" class="form-label">Quantity:</label>
+                <input type="number" class="form-control" name="quantity" id="quantity">
+                <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary" >Submit</button>
                 </form>
             </section>
@@ -50,7 +63,7 @@
                 <label for="humidity" class="form-label">Humidity Demand (Low/Medium/High):</label>
                 <input type="text" class="form-control" name="humidity" id="humidity">
                 <label for="quantity" class="form-label">Quantity:</label>
-                <input type="" class="form-control" name="quantity" id="quantity">
+                <input type="number" class="form-control" name="quantity" id="quantity">
                 <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary" >Submit</button>
             </form>
