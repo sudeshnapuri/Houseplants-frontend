@@ -57,3 +57,27 @@ const getPlants = () => {
     .catch(err => console.error(err));
 }
 getPlants();
+
+document.querySelector("#houseplantForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const form = this;
+
+    const data = {
+        plantName: form.plantName.value,
+        water: form.water.value,
+        sunlight: form.sunlight.value,
+        humidity: form.humidity.value,
+        quantity: form.quantity.value,
+    };
+
+    axios
+        .post("http://localhost:8081/create", data)
+        .then((response) => {
+                getPlants();
+                form.reset();
+                form.plantName.focus();
+                console.log(response);
+        })
+        .catch(err => console.error(err));
+    });
