@@ -81,3 +81,20 @@ document.querySelector("#houseplantForm").addEventListener("submit", function(ev
         })
         .catch(err => console.error(err));
     });
+
+    document.querySelector("#deleteForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const form = this;
+    
+        const plantIdDelete = form.plantIdDelete.value;
+        axios
+            .delete(`http://localhost:8081/remove/${plantIdDelete}`)
+            .then(res => {
+                console.log(res);
+                form.reset();
+                form.plantIdDelete.focus();
+                getDucks();
+            })
+            .catch(err => console.error(err));
+    });
