@@ -12,8 +12,33 @@
 <body>
     <h1>Houseplant Register</h1>
     <main class ="container">
-        <div>
-        <section>
+        <div class="row">
+        <div class="col-sm-9 col-md-3">
+            <section>
+                <h5>Delete Houseplant by ID</h5>
+                <form id= "deleteForm"> 
+                <label for="plantIdDelete" class="form-label">Plant ID:</label>
+                <input type="text" class="form-control" name="plantIdDelete" id="plantIdDelete">
+                <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </section>
+            <section>
+                <h5>Find Houseplant by ID</h5>
+                <form id= "houseplantIdForm"> 
+                <label for="plantIdFind" class="form-label">Plant ID:</label>
+                <input type="text" class="form-control" name="plantIdFind" id="plantIdFind">
+                <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </section>
+            <section>
+                <h5>Update Houseplant by ID</h5>
+                <form id= "houseplantUpdateIdForm"> 
+                <label for="plantIdUpdate" class="form-label">Plant ID:</label>
+                <input type="text" class="form-control" name="plantIdUpdate" id="plantIdUpdate">
+                <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </section>
+            <section>
             <h5>Add Houseplant</h5>
             <form id= "houseplantForm"> 
                 <label for="plantName" class="form-label">Plant name:</label>
@@ -31,14 +56,14 @@
             </form>
         </section>
         </div>
-        <div>>
+        <div class ="col">
             <section>
             <h5>Current Houseplants</h5>
-            <div>
+            <div id="getOutput" class="row row-cols-sm-2 row-cols-md-3 g-4">
             </div>
         </section>
         </div>
-        </div>
+    </div>
     </main>
     <script src="./index.js"></script>
 </body>
