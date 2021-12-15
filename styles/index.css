@@ -1,0 +1,8 @@
+#green{background-color: rgb(146, 192, 127)}
+* {background-color: rgb(187, 223, 173)}
+html{background-color: rgb(146, 192, 127)}
+
+.card {
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.2);
+}
+
