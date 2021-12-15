@@ -11,9 +11,9 @@
 </head>
 <body>
     <h1>Houseplant Register</h1>
-    <main class ="container">
+    <main class ="container-fluid">
         <div class="row">
-        <div class="col-sm-9 col-md-3">
+        <div class="col-md-2">
             <section>
                 <h5>Delete Houseplant by ID</h5>
                 <form id= "deleteForm"> 
@@ -21,16 +21,6 @@
                 <input type="text" class="form-control" name="plantIdDelete" id="plantIdDelete">
                 <button type="submit" class="btn btn-primary" >Submit</button>
                 </form>
-            </section>
-            <section>
-                <h5>Find Houseplant by ID</h5>
-                <form id= "houseplantIdForm"> 
-                <label for="plantIdFind" class="form-label">Plant ID:</label>
-                <input type="number" class="form-control" name="plantIdFind" id="plantIdFind">
-                <button type="submit" class="btn btn-primary" >Submit</button>
-                </form>
-            <div id="getIdOutput">
-            </div>    
             </section>
             <section>
                 <h5>Update Houseplant by ID</h5>
@@ -51,6 +41,8 @@
                 <button type="submit" class="btn btn-primary" >Submit</button>
                 </form>
             </section>
+        </div>
+        <div class="col-md-2">
             <section>
             <h5>Add Houseplant</h5>
             <form id= "houseplantForm"> 
@@ -67,13 +59,24 @@
                 <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary" >Submit</button>
             </form>
-        </section>
-        </div>
-        <div class ="col">
+            </section>
+            </div>
+        <div class ="col-md-8">
+            <section>
+                <h5>Find Houseplant by ID</h5>
+                <form id= "houseplantIdForm"> 
+                <label for="plantIdFind" class="form-label">Plant ID:</label>
+                <input type="number" class="form-control" name="plantIdFind" id="plantIdFind">
+                <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </section>
+            <div id="getIdOutput">
+            </div> 
             <section>
             <h5>Current Houseplants</h5>
-            <div id="getOutput" class="row row-cols-sm-2 row-cols-md-3 g-4">
+            <div id="getOutput" class="row row-cols-sm-2 row-cols-md-4 g-4">
             </div>
+            </section>
         </section>
         </div>
     </div>
