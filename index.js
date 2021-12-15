@@ -163,3 +163,30 @@ document.querySelector("#houseplantForm").addEventListener("submit", function(ev
             })
             .catch(err => console.error(err));
             })
+
+// UPDATE HOUSEPLANTS
+document.querySelector("#houseplantUpdateIdForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const form = this;
+
+    const plantIdUpdate = form.plantIdUpdate.value;
+
+    const updateData = {
+        plantName: form.plantName.value,
+        water: form.water.value,
+        sunlight: form.sunlight.value,
+        humidity: form.humidity.value,
+        quantity: form.quantity.value,
+    };
+
+    axios
+        .put(`http://localhost:8081/replace/${plantIdUpdate}`, updateData)
+        .then((response) => {
+                getPlants();
+                form.reset();
+                form.plantName.focus();
+                console.log(response);
+        })
+        .catch(err => console.error(err));
+    });
