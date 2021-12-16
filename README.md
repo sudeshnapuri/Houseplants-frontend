@@ -63,6 +63,6 @@ I created the front-end using HTML, CSS and JavaScript and also used Bootstrap f
 ![image](https://user-images.githubusercontent.com/93253004/146409467-d1f650eb-23fc-460a-a96b-60cec5891071.png)
 
 # Continued Development
-I could have definetly improved on the styling of the front-end, including adding pictures and improving the layout of the application. I could have utilised Bootstap more, eg. modals etc. to make the update plants bit clearer and also added pop-ups to let the user know that the plant has been deleted, updated or addedd successfully. I could have also added more feature such as Find By Sunlight Demand, Water Demand and also changed the text field entry to a drop down entry so users can only select Low, Medium or High for the demands.
+I could have definitely improved on the styling of the front-end, including adding pictures and improving the layout of the application. I could have utilised Bootstap more, eg. modals etc. to make the update plants bit clearer and also added pop-ups to let the user know that the plant has been deleted, updated or addedd successfully. I could have also added more feature such as Find By Sunlight Demand, Water Demand and also changed the text field entry to a drop down entry so users can only select Low, Medium or High for the demands.
 
 
