@@ -2,6 +2,7 @@
 
 const getOutput = document.querySelector("#getOutput");
 const getIdOutput = document.querySelector("#getIdOutput");
+const getNameOutput = document.querySelector("#getNameOutput");
 
 // GET ALL HOUSEPLANTS
 const getPlants = () => {
@@ -50,6 +51,17 @@ const getPlants = () => {
             houseplantQuantity.innerText = `Quantity: ${houseplant.quantity}`;
             houseplantBody.appendChild(houseplantQuantity);
 
+            const houseplantDelete = document.createElement("button");
+            houseplantDelete.innerText = "Delete";
+            houseplantDelete.classList.add("btn", "btn-danger");
+            houseplantDelete.addEventListener("click", () => {
+                axios
+                    .delete(`http://localhost:8081/remove/${houseplant.id}`)
+                    .then(response => getPlants())
+                    .catch(err => console.error(err))
+                });
+
+            houseplantBody.appendChild(houseplantDelete)
             houseplantCard.appendChild(houseplantBody);
             houseplantCol.appendChild(houseplantCard);
 
@@ -190,3 +202,67 @@ document.querySelector("#houseplantUpdateIdForm").addEventListener("submit", fun
         })
         .catch(err => console.error(err));
     });
+
+// GET HOUSEPLANT BY PLANT NAME
+document.querySelector("#houseplantNameForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const form = this;
+    const plantNameFind = form.plantNameFind.value;
+    
+    const getPlantsByName = () => {
+        axios
+        .get(`http://localhost:8081/getByPlantName/${plantNameFind}`)
+        .then(response => {
+            const houseplants = response.data;
+            getNameOutput.innerHTML = "";
+            for (let houseplant of houseplants) {
+                const houseplantNameCol = document.createElement("div");
+                houseplantNameCol.classList.add("col");
+
+                const houseplantNameCard = document.createElement("div");
+                houseplantNameCard.classList.add("card");
+
+                const houseplantNameBody = document.createElement("div");
+                houseplantNameBody.classList.add("card-body");
+
+                const houseplantId = document.createElement("h5");
+                houseplantId.classList.add("card-title");
+                houseplantId.innerText = `ID: ${houseplant.id}`;
+                houseplantNameBody.appendChild(houseplantId);
+
+                const houseplantName = document.createElement("p");
+                houseplantName.classList.add("card-text");
+                houseplantName.innerText = `Plant Name: ${houseplant.plantName}`;
+                houseplantNameBody.appendChild(houseplantName);
+
+                const houseplantWater = document.createElement("p");
+                houseplantWater.classList.add("card-text");
+                houseplantWater.innerText = `Water: ${houseplant.water}`;
+                houseplantNameBody.appendChild(houseplantWater);
+
+                const houseplantSunlight = document.createElement("p");
+                houseplantSunlight.classList.add("card-text");
+                houseplantSunlight.innerText = `Sunlight: ${houseplant.sunlight}`;
+                houseplantNameBody.appendChild(houseplantSunlight);
+
+                const houseplantHumidity = document.createElement("p");
+                houseplantHumidity.classList.add("card-text");
+                houseplantHumidity.innerText = `Humidity: ${houseplant.humidity}`;
+                houseplantNameBody.appendChild(houseplantHumidity);
+
+                const houseplantQuantity = document.createElement("p");
+                houseplantQuantity.classList.add("card-text");
+                houseplantQuantity.innerText = `Quantity: ${houseplant.quantity}`;
+                houseplantNameBody.appendChild(houseplantQuantity);
+
+                houseplantNameCard.appendChild(houseplantNameBody);
+                houseplantNameCol.appendChild(houseplantNameCard);
+
+                getNameOutput.appendChild(houseplantNameCol);
+            }
+        })
+        .catch(err => console.error(err));
+    }
+
+    getPlantsByName();
+})
