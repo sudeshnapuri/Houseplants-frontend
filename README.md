@@ -18,7 +18,8 @@ For the front-end, I used HTML, CSS and JavaScript to create a functioning front
 I used GitHub for versioning (https://github.com/).
 
 JIRA board: https://sudeshnapuri.atlassian.net/jira/software/projects/HPS/boards/2
-Google Slides Presentation: 
+
+Google Slides Presentation: https://1drv.ms/p/s!AtmxmIFB_gGjhjEe4Zpi_FoM2OCU?e=svMMSi
 
 # Planning Resources
 Firstly, I created a JIRA board to break down tasks into user stories and acceptance criteria. Then I created some epics so I could organise my tasks. I tried to make the tasks as small and specific as possible. I then created the Sprint with the goal of "To create a Minimum Viable Product (Houseplant Register) and Test with 70% coverage or Test of all the methods atleast". 
