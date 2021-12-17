@@ -47,7 +47,7 @@ I used MySQL Workbench database for storing the data from the application, as we
 I used a default H2 database for testing as it doesn't store any data. The database was set up using the application.properties file, houseplant-schema.sql and houseplant-data.sql files to create and drop the table containing specified records before each test.
 
 # Back-end
-The back-end of this project was created using Java and SpringBoot on Eclipse. I created a domain class (contains properties of my plants), repository class (which handles persistence), a service interface and servicedb class (which contained all business logic) and a controller (enables the request mappings). We converted our data to JSON and used status codes when writing HTTP requests inorder to build a RESTFUL API. I generated a ULM to display these classes and their relationships. Along with the MustHave requirements from my JIRA board, I also managed to add two ShouldHave requirements to the back-end.
+The back-end of this project was created using Java and SpringBoot on Eclipse. I created a domain class (contains properties of my plants), repository class (which handles persistence), a service interface and servicedb class (which contained all business logic) and a controller (enables the request mappings). I generated a ULM to display these classes and their relationships. Along with the MustHave requirements from my JIRA board, I also managed to add two ShouldHave requirements to the back-end.
 
 ![image](https://user-images.githubusercontent.com/93253004/146408855-4c5f0225-122c-40b7-afe0-2d418bf9bd9a.png)
 
@@ -58,7 +58,7 @@ I used Postman to mock the front-end to test my methods to make sure they were w
 ![image](https://user-images.githubusercontent.com/93253004/146409170-ef1359f9-a9e4-434f-a037-491a7ae6d38c.png)
 
 # Front-end
-I created the front-end using HTML, CSS and JavaScript and also used Bootstrap for styling. I tried to match my website design to the rough design I created at the start of the project but also managed to add in some more features such as the scroll bar and shadows to the cards etc. The front-end doesn't look amazing but it is clearly laid out and full functioning for a minimum viable product. I was also able to make the screen responsive so it is clear on a small screen also. I used Javascript and Axios to create HTTP requests for the API integration.
+I created the front-end using HTML, CSS and JavaScript and also used Bootstrap for styling. I tried to match my website design to the rough design I created at the start of the project but also managed to add in some more features such as the scroll bar and shadows to the cards etc. The front-end doesn't look amazing but it is clearly laid out and full functioning for a minimum viable product. I was also able to make the screen responsive so it is clear on a small screen also. I used Javascript and Axios to create HTTP requests for the API integration. We converted our data to JSON and used status codes when writing HTTP requests inorder to build a RESTFUL API.
 
 ![image](https://user-images.githubusercontent.com/93253004/146409467-d1f650eb-23fc-460a-a96b-60cec5891071.png)
 
